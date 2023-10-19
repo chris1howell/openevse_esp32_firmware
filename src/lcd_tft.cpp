@@ -85,10 +85,7 @@ unsigned long LcdTask::loop(MicroTasks::WakeReason reason)
       _lcd.begin();
       _lcd.setRotation(1);
 
-      _lcd.fillScreen(TFT_OPENEVSE_BACK);
-      _lcd.fillSmoothRoundRect(90, 90, 300, 110, 15, TFT_WHITE);
-      _lcd.fillSmoothRoundRect(90, 235, 300, 16, 8, TFT_OPENEVSE_GREEN);
-      render_image("/logo.png", 104, 115);
+      render_image("/BootScreen.png", 0, 0);
 
       pinMode(LCD_BACKLIGHT_PIN, OUTPUT);
       digitalWrite(LCD_BACKLIGHT_PIN, HIGH);
